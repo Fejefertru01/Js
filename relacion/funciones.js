@@ -128,7 +128,7 @@ function ejercicio10() {
 }
 ejercicio10();
 
-/**
+/**Ejercicio 10 ELLIOT
  * function quitarRepetidos(array1, array2) {
     let array_unido = array1.concat(array2);
     let array_final = comprobarRepetidos(array_unido);
@@ -162,6 +162,64 @@ let array1 = [77, "ciao"];
 let array2 = [78, 42, "ciao"];
 quitarRepetidos(array1, array2);
  */
+/**EJERCICIO 10 JAIME
+ * function ejercicio10() {
+    var array1 = [];
+    var array2 = [];
+    var arrayJunta = [];
+    var arrayFinal = [];
+    var numero;
+    do {
+        numero = prompt("Introduzca numeros. Cuando haya acabado escriba *");
+        if (numero != "*") {
+            if (isNaN(numero)) {
+                alert("Introduce valores por favor")
+            }
+            else {
+                array1.push(parseInt(numero));
+            }
+
+        }
+        
+    } while (numero != "*");
+    console.log("Array 1: " + array1);
+    do {
+        numero = prompt("Introduzca numeros. Cuando haya acabado escriba *");
+        if (numero != "*") {
+            if (isNaN(numero)) {
+                alert("Introduce valores por favor")
+            }
+            else {
+                array2.push(parseInt(numero));
+            }
+
+        }
+        
+    } while (numero != "*");
+    console.log("Array 2: " + array2);
+
+    arrayJunta = array1.concat(array2);
+    console.log("Este es el array junto: " + arrayJunta);
+
+    let contador = 0;
+    do {
+        let repetido = false
+        let numero = arrayJunta[contador];
+        for (let i = arrayJunta.indexOf(numero) + 1; i < arrayJunta.length; i++) {
+            if (numero == arrayJunta[i]) {
+                repetido = true;
+                break;
+            }
+        }
+        if (!repetido){
+            arrayFinal.push(numero);
+        }
+        contador++;
+    } while (contador < arrayJunta.length);
+
+    console.log(arrayFinal);
+}
+ */
 
 function ejercicio15() {
   let numMesas = 0;
@@ -187,7 +245,6 @@ function ejercicio15() {
     } else if (comensales > 4) {
       alert("El maximo por mesa son 4. Introduzca otro numero por favor");
     } else {
-
       if (comensales > 0) {
         for (let i = 0; i < mesas.length; i++) {
           if (mesas[i] == 0) {
@@ -199,9 +256,8 @@ function ejercicio15() {
           }
         }
         if (!comensalesSentados) {
-
           for (let i = 0; i < mesas.length; i++) {
-            let totalMesa=parseInt (mesas[i])+parseInt(comensales);
+            let totalMesa = parseInt(mesas[i]) + parseInt(comensales);
             if (totalMesa <= 4) {
               console.log("Por favor sientense en la mesa " + (i + 1));
               mesas[i] = totalMesa;
@@ -210,7 +266,6 @@ function ejercicio15() {
               break;
             }
           }
-          
         }
 
         if (!comensalesSentados) {
