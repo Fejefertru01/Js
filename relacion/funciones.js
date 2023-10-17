@@ -220,6 +220,11 @@ quitarRepetidos(array1, array2);
     console.log(arrayFinal);
 }
  */
+/**------------FUNCION RANDOM---------------
+ * function random(min, max) {
+    return parseInt(Math.random() * (max - min + 1) + min); }
+ * 
+ */
 
 function ejercicio15() {
   let numMesas = 0;
