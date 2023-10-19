@@ -1,7 +1,7 @@
+let tabla = document.getElementsByClassName("pakita")[0];
 function alturaAnchura() {
   let altura = prompt("Dime la altura de la tabla");
   let anchura = prompt("Dime la anchura de la tabla");
-
 
   tabla.setAttribute("height", altura);
   tabla.setAttribute("width", anchura);
@@ -10,8 +10,6 @@ function alturaAnchura() {
 function sumarAlturaAnchura() {
   let altura = parseInt(prompt("Dime la altura de la tabla a sumar"));
   let anchura = parseInt(prompt("Dime la anchura de la tabla a sumar"));
-
- 
 
   let alturaExistente = parseInt(tabla.getAttribute("height"));
   let anchuraExistente = parseInt(tabla.getAttribute("width"));
@@ -27,7 +25,6 @@ function cambiarBorde() {
 }
 
 function cambiarAlineacion() {
-
   if (tabla.getAttribute("align") == "left") {
     tabla.setAttribute("align", "center");
   } else if (tabla.getAttribute("align") == "center") {
@@ -41,7 +38,6 @@ function cambiarCSS() {
   if (tabla.getAttribute("class") == "pakita") {
     tabla.setAttribute("class", "cicio");
   } else {
-    tabla.setAttribute("class", "pakita")
+    tabla.setAttribute("class", "pakita");
   }
 }
-let tabla = document.getElementsByClassName("pakita")[0];
