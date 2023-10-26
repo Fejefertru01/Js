@@ -1,0 +1,10 @@
+.uno{
+    font-size: 20px;
+    background-color: aquamarine;
+    border: 1px solid black;
+}
+.dos{
+    font-size: 30px;
+    background-color: brown;
+    border: 4px solid rgb(208, 255, 0);
+}
