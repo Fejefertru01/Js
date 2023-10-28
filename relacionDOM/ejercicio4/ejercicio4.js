@@ -10,13 +10,13 @@ function siguienteImagen() {
     let divi = document.getElementById("imagen");
     let ruta = divi.getAttribute("src");
     for (let i = 0; i < imagenes.length; i++) {
-        if (ruta.split("/")[4].match(imagenes[i])) {
+        if (ruta.split("/")[1].match(imagenes[i])) {
             if (imagenes[i].match("kikorivera2.jpg")) {
                 document.getElementById("botonSiguiente").disabled = true;
             }
             divi.setAttribute(
                 "src",
-                "/JavaScript/SegundaRelacion/imagenesEj4/" + imagenes[i + 1]
+                "imagenesEj4/" + imagenes[i + 1]
             );
 
 
@@ -30,13 +30,13 @@ function anteriorImagen() {
     let ruta = divi.getAttribute("src");
 
     for (let i = 0; i < imagenes.length; i++) {
-        if (ruta.split("/")[4].match(imagenes[i])) {
+        if (ruta.split("/")[1].match(imagenes[i])) {
             if (imagenes[i].match("elbichopelao.jpg")) {
                 document.getElementById("botonAnterior").disabled = true;
             }
             divi.setAttribute(
                 "src",
-                "/JavaScript/SegundaRelacion/imagenesEj4/" + imagenes[i - 1]
+                "imagenesEj4/" + imagenes[i - 1]
             );
 
         }
