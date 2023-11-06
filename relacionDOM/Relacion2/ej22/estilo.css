@@ -1,0 +1,8 @@
+.capaTransparente{
+    background-color: rgba(122, 126, 126, 0.637);
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}

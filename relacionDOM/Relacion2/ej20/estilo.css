@@ -1,0 +1,13 @@
+.clase1{
+    width: 50%;
+    height: 50%;
+    border: 1px solid black;
+    font-size: 1rem;
+    
+}
+.clase2{
+    width: 70%;
+    height: 70%;
+    border: 3px dotted rgb(255, 0, 0);
+    font-size: 2rem;
+}

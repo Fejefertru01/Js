@@ -13,8 +13,7 @@ function correr(){
 
         if(parseInt(div.style.left)+ parseInt(div.offsetWidth)+avance>parseInt(window.innerWidth)){
             div.style.left=window.innerWidth-parseInt(div.offsetWidth)+"px";
-            console.log(div.style.left);
-            console.log(window.innerWidth);
+
             setTimeout(()=>{alert("Ha ganado "+div.textContent);},100);
             clearInterval(tiempo);
             
