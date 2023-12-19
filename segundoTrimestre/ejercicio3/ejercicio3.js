@@ -5,16 +5,18 @@ document.querySelectorAll("input[type='checkbox']").forEach(function (element) {
             document.querySelector("textarea").value = texto + element.value + "\n";
         } else {
             let lista = document.querySelector("textarea").value.split("\n");
-           let posicion= lista.indexOf(element.value)
+            let posicion = lista.indexOf(element.value)
+            console.log(lista);
+            lista.splice(posicion,1);
+            document.querySelector("textarea").value = "";
+            for (let i = 0; i < lista.length; i++) {
+                let palabra = lista[i];
+                if(palabra!=""){
+                    document.querySelector("textarea").value = document.querySelector("textarea").value + palabra + "\n";
+                }
+                
+            }
 
-            
-            
-            // for(let i=0;i<lista.length;i++){
-            //     if(lista[i]==element.value){
-            //         lista[i]="";
-            //     }
-            // }
-            document.querySelector("textarea").value="";
         }
 
     })
