@@ -5,8 +5,7 @@ document.querySelectorAll("input[type='checkbox']").forEach(function (element) {
             document.querySelector("textarea").value = texto + element.value + "\n";
         } else {
             let lista = document.querySelector("textarea").value.split("\n");
-            let posicion = lista.indexOf(element.value)
-            console.log(lista);
+            let posicion = lista.indexOf(element.value);
             lista.splice(posicion,1);
             document.querySelector("textarea").value = "";
             for (let i = 0; i < lista.length; i++) {
