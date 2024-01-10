@@ -1,12 +1,14 @@
 document.querySelectorAll("input")[7].addEventListener("click",function(ev){
     ev.preventDefault();
     let formularioCorrecto=true;
+    // ----------------------COMPRUEBO DNI---------------
     let dni=document.querySelectorAll("input")[0].value.split("");
     let contadorLetras=0;
     if(dni.length!=9){
         alert("El DNI tiene 8 digitos y 1 letra");
         formularioCorrecto=false;
         document.querySelectorAll("input")[0].focus();
+        document.querySelectorAll("input")[0].value="";
     }
     for(let i=0;i<dni.length;i++){
         if(isNaN(dni[i])) contadorLetras++;
@@ -15,10 +17,10 @@ document.querySelectorAll("input")[7].addEventListener("click",function(ev){
         alert("El DNI tiene exactamente una letra");
         formularioCorrecto=false;
         document.querySelectorAll("input")[0].focus();
+        document.querySelectorAll("input")[0].value="";
     }
-
+    // -----------------COMPRUEBO NOMBRE--------------------------
     let nombre=document.querySelectorAll("input")[1].value.split(" ");
-    console.log(nombre);
     if(document.querySelectorAll("input")[1].value=="" && formularioCorrecto){
         alert("El nombre no puede estar vacio")
         formularioCorrecto=false;
@@ -45,10 +47,11 @@ document.querySelectorAll("input")[7].addEventListener("click",function(ev){
             alert("Los apellidos deben tener una o dos palabras");
             formularioCorrecto=false;
             document.querySelectorAll("input")[2].focus();
+
         }
     }
 
-
+    // ---------------COMPRUEBO FECHA--------------------------------
     let fechaNacimiento=document.querySelectorAll("input")[3].value.split("/");
     if(fechaNacimiento.length==3 && formularioCorrecto){
         if(fechaNacimiento[0].length!=2 && formularioCorrecto||fechaNacimiento[1].length!=2 && formularioCorrecto||fechaNacimiento[2].length!=4 && formularioCorrecto){
