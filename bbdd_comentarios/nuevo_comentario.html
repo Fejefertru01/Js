@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comente lo que quiera</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <button id="ver_comentarios"><a href="index.html">Ver comentarios</a></button><br><br>
+    <form name="formulario_comentario">
+        <label for="usuario" name="label_usuario">Usuario: </label>
+        <input type="text" name="usuario"><br><br>
+        <label for="fecha" name="label_fecha">Fecha:</label>
+        <input type="date" name="fecha"><br><br>
+        <label for="comentario" name="label_comentario">Comentario:</label><br>
+        <textarea id="comentario" name="comentario" rows="4" cols="50"></textarea><br><br>
+        <input type="submit" value="Comentar">
+    </form>
+    <script src="funciones_nuevo_comentario.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+CREATE SCHEMA db_comentarios;
+
+
+
+USE db_comentarios;
+
+
+
+CREATE TABLE comentario (
+	id INT AUTO_INCREMENT PRIMARY KEY,
+    comentario VARCHAR(255),
+    usuario VARCHAR(50),
+    fecha DATE
+);
